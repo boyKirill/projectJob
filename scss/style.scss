@@ -21,7 +21,7 @@ body._lock {
 	font-family: "Open Sans", sans-serif;
 	min-height: 100vh;
 	display: flex;
-	background: linear-gradient(rgba(0, 0, 0, 0.7)), url("../img/bgForFullscreen.jpg");
+	background: linear-gradient(rgba(0, 0, 0, 0.7)), url("../img/bg/bgForFullscreen.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -62,7 +62,7 @@ body._lock {
 		border-radius: 5px;
 	}
 }
-
+/*
 .menu {
 	position: relative;
 
@@ -189,12 +189,11 @@ min-height: 100vh;
 	}
 
 	&__text {
-		color: #212121;
 		font-family: "Open Sans", sans-serif;
-		font-size: 15px;
-		line-height: 22px;
+		font-size: 25px;
+		color: #000;
 		text-align: center;
-		letter-spacing: 0.75px;
+		padding: 20px 0 50px 0;
 	}
 
 	&__teacher {
@@ -205,7 +204,7 @@ min-height: 100vh;
 		line-height: 22px;
 		text-align: center;
 		letter-spacing: 1.5px;
-		padding: 80px 0 15px 0;
+		padding: 40px 0 15px 0;
 	}
 
 	&__boss {
@@ -270,11 +269,12 @@ min-height: 100vh;
 		max-width: 300px;
 	}
 }
+
 .member {
-	width: 300px;
+	width: 33.333%;
 	&__img {
 		img {
-			width: 300px;
+			width: 100%;
 			border-radius: 10px;
 		}
 	}
@@ -353,12 +353,12 @@ min-height: 100vh;
 	&__body-item {
 		display: flex;
 		flex-direction: row;
-		
 	}
 
 	&__image {
 		width: 49%;
 		img {
+			border-radius: 10px;
 			width: 100%;
 		}
 	}
@@ -392,6 +392,12 @@ min-height: 100vh;
 		text-align: center;
 		letter-spacing: 1.5px;
 		padding: 50px 0 40px 0;
+	}
+}
+
+.image-slider__image {
+	img {
+		max-width: 80%;
 	}
 }
 
@@ -430,7 +436,7 @@ min-height: 100vh;
 		display: none;
 		position: fixed;
 		z-index: 10000;
-		background-color: black;
+		background-color: #222222;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
@@ -484,7 +490,7 @@ min-height: 100vh;
 }
 .popup-fade:before {
 	content: "";
-	background: #000;
+	background: #2f3030;
 	position: fixed;
 	left: 0;
 	top: 0;
