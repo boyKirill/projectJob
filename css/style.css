@@ -357,6 +357,7 @@ min-height: 100vh;
   color: #000;
   text-align: center;
   padding: 20px 0 50px 0;
+  line-height: 28px;
 }
 
 .team__teacher {
@@ -367,7 +368,7 @@ min-height: 100vh;
   line-height: 22px;
   text-align: center;
   letter-spacing: 1.5px;
-  padding: 40px 0 15px 0;
+  padding: 10px 0 15px 0;
 }
 
 .team__boss {
@@ -407,9 +408,9 @@ min-height: 100vh;
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
