@@ -100,6 +100,21 @@
   .school__text {
     font-size: 23px;
   }
+  .image-slider .swiper-button-prev::after,
+  .image-slider .swiper-button-next::after {
+    font-size: 40px;
+  }
+  .slider {
+    padding: 30px 0 40px 0;
+    background-color: #212121;
+  }
+  .slider__title {
+    font-size: 25px;
+    padding: 20px 15px 40px 15px;
+  }
+  .image-slider__image img {
+    max-width: 70%;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -121,5 +136,43 @@
   .school__text {
     font-size: 20px;
     line-height: 24px;
+  }
+  .team__title {
+    font-size: 25px;
+    padding: 50px 0 10px 0;
+  }
+  .team__text {
+    font-size: 20px;
+    padding: 0 10px 30px 10px;
+  }
+  .team__teacher {
+    padding: 0;
+  }
+  .team__classmates {
+    padding: 30px 0 0 0;
+  }
+  .team__box {
+    padding: 0 0 20px 0;
+  }
+  .boss__description {
+    font-size: 17px;
+  }
+  .member__description {
+    font-size: 17px;
+  }
+  .image-slider .swiper-button-prev::after,
+  .image-slider .swiper-button-next::after {
+    display: none;
+  }
+  .image-slider .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+  }
+  .slider {
+    background-color: #212121;
+  }
+  .slider__title {
+    font-size: 20px;
+    padding: 0px 15px 20px 15px;
   }
 }

@@ -29,13 +29,13 @@
 }
 
 .image-slider .swiper-pagination {
-  bottom: 0;
+  bottom: -15px;
 }
 
 .image-slider .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
-  line-height: 40;
+  line-height: 40px;
   font-size: 14px;
   background-color: #fff;
 }
