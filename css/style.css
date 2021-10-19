@@ -206,9 +206,10 @@ body._lock {
 }
 
 .fullscreen__text {
-  font-size: 25px;
+  font-size: 30px;
   color: #fff;
   margin: 0 0 20px 0;
+  padding: 0 10px;
 }
 
 .fullscreen__link {
@@ -223,6 +224,11 @@ body._lock {
       align-self: center;
   padding: 0 20px;
   border-radius: 5px;
+}
+
+.fullscreen__link:hover {
+  background-color: #f3da0b;
+  color: black;
 }
 
 /*
@@ -507,6 +513,10 @@ min-height: 100vh;
 .member__links a:hover {
   background-color: #3949ab;
   color: #fff;
+}
+
+.school {
+  background: #f7f7f7;
 }
 
 .school__title {

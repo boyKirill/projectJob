@@ -1,1 +1,125 @@
-/* No CSS */
+@media screen and (max-width: 991px) {
+  .fullscreen__body {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 50px 0 0 0;
+  }
+  .fullscreen__title {
+    font-size: 40px;
+  }
+  .fullscreen__text {
+    font-size: 22px;
+  }
+  .school__title {
+    padding: 60px 0 5px 0;
+  }
+  .school__body {
+    padding: 15px 0 70px 0;
+  }
+  .school__text {
+    padding: 10px 0 0 0px;
+    font-size: 25px;
+    line-height: 44px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .school__title {
+    padding: 50px 0 5px 0;
+  }
+  .school__body {
+    padding: 0px 0 40px 0;
+  }
+  .school__body-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .school__image {
+    width: 80%;
+  }
+  .school__text-box {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 80%;
+  }
+  .school__text-box:last-child {
+    padding-left: 0;
+  }
+  .school__text {
+    max-width: 100%;
+    padding: 10px 10px 25px 10px;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fullscreen__body {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 50px 0 0 0;
+  }
+  .fullscreen__text {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .fullscreen {
+    background-image: none;
+    background-color: #082567;
+  }
+  .fullscreen__body {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+  .fullscreen__title {
+    font-size: 35px;
+    margin: 0 0 10px 0;
+  }
+  .fullscreen__text {
+    font-size: 18px;
+  }
+  .fullscreen__link {
+    background-color: #f3da0b;
+    color: black;
+    padding: 10px 40px;
+    font-size: 20px;
+  }
+  .school__text {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .fullscreen__title {
+    font-size: 28px;
+  }
+  .school__title {
+    font-size: 28px;
+    line-height: 0;
+    padding: 50px 0 5px 0;
+  }
+  .school__subtitle {
+    font-size: 22px;
+    line-height: 24px;
+  }
+  .school__body {
+    padding: 0 0 20px 0;
+  }
+  .school__text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
