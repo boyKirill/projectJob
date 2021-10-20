@@ -1,11 +1,9 @@
 @import "nullstyle.scss";
 @import "slider.scss";
 
-body {
-}
-
 body._lock {
-	overflow: hidden;
+	overflow-y: hidden;
+	padding-right: 16.5px;
 }
 
 //оболочка
@@ -22,6 +20,7 @@ body._lock {
 	display: flex;
 	background: linear-gradient(rgba(0, 0, 0, 0.7)), url("../img/bg/bgForFullscreen.webp");
 	background-repeat: no-repeat;
+	background-position: center;
 	background-size: cover;
 
 	&__body {
@@ -416,9 +415,6 @@ min-height: 100vh;
 .photo-grid {
 	padding: 0 0 30px 0;
 
-	&__container {
-	}
-
 	&__title {
 		color: #212121;
 		font-family: "Open Sans", sans-serif;
@@ -450,56 +446,6 @@ min-height: 100vh;
 			transform: scale(1.05);
 		}
 	}
-
-	&__popup {
-		display: none;
-		position: fixed;
-		z-index: 10000;
-		background-color: #222222;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		width: 90%;
-		height: 90vh;
-	}
-
-	&__box-image {
-		padding: 40px 0 40px 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 100%;
-	}
-
-	&__box-image-img {
-		height: 100%;
-	}
-
-	&__close {
-		position: absolute;
-		color: white;
-		float: right;
-		font-size: 30px;
-		right: 20px;
-		top: 20px;
-		cursor: pointer;
-	}
-}
-
-.popup-fade {
-	display: none;
-}
-.popup-fade:before {
-	content: "";
-	background: #2f3030;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	opacity: 0.8;
-	z-index: 9999;
 }
 
 .footer {
@@ -516,5 +462,74 @@ min-height: 100vh;
 		line-height: 22px;
 		text-align: center;
 		letter-spacing: 1.5px;
+	}
+}
+
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 0 30px;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+	&:target {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__area {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		cursor: auto;
+	}
+
+	&__body {
+		min-height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 30px 10px;
+	}
+
+	&__content {
+		background-color: #fff; //rgb(34,34,34);
+		color: #000;
+		width: 1000px;
+		padding: 30px;
+		position: relative;
+	}
+
+	&__title {
+		font-size: 30px;
+		padding: 0 0 30px 0;
+		text-align: center;
+	}
+
+	&__text {
+		font-size: 24px;
+	}
+
+	&__close {
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		font-size: 50px;
+		color: #000;
+	}
+
+	&__image-box {
+		width: 90%;
+		padding-left: 10%;
+	}
+
+	&__image {
+		width: 100%;
 	}
 }

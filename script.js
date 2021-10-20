@@ -264,43 +264,12 @@ const swiper = new Swiper('.image-slider', {
 });
 
 
+//вставка картинок в popup
+$('.photo-grid__image').click(function () {
+	let src = $(this).attr('src');
+	$('.popup__image').attr('src', src);
 
-$(document).ready(function ($) {
-	$('.photo-grid__view img').click(function () {
-
-		document.body.classList.toggle('_lock');
-		let src = $(this).attr('src');
-		$('.photo-grid__popup img').attr('src', src);
-		$('.photo-grid__popup').fadeIn();
-
-		$('.popup-fade').fadeIn();
-
-		return false;
-	});
-
-	$('.photo-grid__close').click(function () {
-
-		$('.photo-grid__popup').fadeOut();
-		$('.popup-fade').fadeOut();
-		document.body.classList.remove('_lock');
-		return false;
-	});
-
-	$(document).keydown(function (e) {
-		if (e.keyCode === 27) {
-			e.stopPropagation();
-
-			$('.popup-fade').fadeOut();
-			$('.photo-grid__popup').fadeOut();
-			document.body.classList.remove('_lock');
-		}
-	});
-
-	$('.popup-fade').click(function (e) {
-		if ($(e.target).closest('.photo-grid__popup').length == 0) {
-			$(this).fadeOut();
-		}
-	});
 });
+
 
 
