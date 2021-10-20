@@ -22,6 +22,9 @@
     font-size: 25px;
     line-height: 44px;
   }
+  .popup__content {
+    width: 700px;
+  }
 }
 
 @media screen and (max-width: 830px) {
@@ -71,6 +74,9 @@
   .fullscreen__text {
     font-size: 20px;
   }
+  .popup__content {
+    padding: 25px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -115,6 +121,33 @@
   .image-slider__image img {
     max-width: 70%;
   }
+  .popup__content {
+    width: 700px;
+    padding: 0;
+  }
+  .popup__close {
+    font-size: 40px;
+    right: 5px;
+    top: 0;
+    color: #ffff;
+  }
+  .popup__image-box {
+    width: 100%;
+    padding-left: 0;
+  }
+  .photo-grid__title {
+    font-size: 27px;
+  }
+  .photo-grid__view {
+    width: 30%;
+    margin: 0.5%;
+  }
+  .footer {
+    height: 50px;
+  }
+  .footer__copyrights {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -122,19 +155,19 @@
     font-size: 28px;
   }
   .school__title {
-    font-size: 28px;
+    font-size: 25px;
     line-height: 0;
     padding: 50px 0 5px 0;
   }
   .school__subtitle {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 24px;
   }
   .school__body {
     padding: 0 0 20px 0;
   }
   .school__text {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 24px;
   }
   .team__title {
@@ -174,5 +207,25 @@
   .slider__title {
     font-size: 20px;
     padding: 0px 15px 20px 15px;
+  }
+  .photo-grid__title {
+    font-size: 23px;
+    padding: 50px 5px 20px 5px;
+  }
+  .photo-grid__view {
+    width: 30%;
+    margin: 0.5%;
+  }
+  .popup {
+    padding: 0 5px;
+  }
+  .popup__close {
+    font-size: 35px;
+  }
+  .footer {
+    height: 35px;
+  }
+  .footer__copyrights {
+    font-size: 10px;
   }
 }

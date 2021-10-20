@@ -35,6 +35,12 @@
 			line-height: 44px;
 		}
 	}
+
+	.popup {
+		&__content {
+			width: 700px;
+		}
+	}
 }
 
 @media screen and (max-width: 830px) {
@@ -81,6 +87,12 @@
 		}
 		&__text {
 			font-size: 20px;
+		}
+	}
+
+	.popup {
+		&__content {
+			padding: 25px;
 		}
 	}
 }
@@ -135,6 +147,43 @@
 		}
 	}
 	//слайдер-->>
+
+	.popup {
+		&__content {
+			width: 700px;
+			padding: 0;
+		}
+
+		&__close {
+			font-size: 40px;
+			right: 5px;
+			top: 0;
+			color: #ffff;
+		}
+
+		&__image-box {
+			width: 100%;
+			padding-left: 0;
+		}
+	}
+
+	.photo-grid {
+		&__title {
+			font-size: 27px;
+		}
+
+		&__view {
+			width: 30%;
+			margin: 0.5%;
+		}
+	}
+
+	.footer {
+		height: 50px;
+		&__copyrights {
+			font-size: 16px;
+		}
+	}
 }
 
 @media screen and (max-width: 320px) {
@@ -146,13 +195,13 @@
 
 	.school {
 		&__title {
-			font-size: 28px;
+			font-size: 25px;
 			line-height: 0;
 			padding: 50px 0 5px 0;
 		}
 
 		&__subtitle {
-			font-size: 22px;
+			font-size: 20px;
 			line-height: 24px;
 		}
 
@@ -161,7 +210,7 @@
 		}
 
 		&__text {
-			font-size: 20px;
+			font-size: 16px;
 			line-height: 24px;
 		}
 	}
@@ -216,4 +265,39 @@
 		}
 	}
 	//слайдер-->>
+
+	.photo-grid {
+		&__container {
+		}
+
+		&__title {
+			font-size: 23px;
+			padding: 50px 5px 20px 5px;
+		}
+
+		&__media {
+		}
+
+		&__view {
+			width: 30%;
+			margin: 0.5%;
+		}
+
+		&__image {
+		}
+	}
+
+	.popup {
+		padding: 0 5px;
+		&__close {
+			font-size: 35px;
+		}
+	}
+
+	.footer {
+		height: 35px;
+		&__copyrights {
+			font-size: 10px;
+		}
+	}
 }
