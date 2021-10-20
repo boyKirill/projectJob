@@ -41,7 +41,7 @@ if (isMobile.any()) {
 	}
 } else {
 	document.body.classList.add('_pc');
-};
+}
 
 
 //прокрутка при клике
@@ -265,10 +265,26 @@ const swiper = new Swiper('.image-slider', {
 
 
 // вставляем картинку в popup
-$('.photo-grid__image').click(function () {
+$('.photo-grid__image').click(function (e) {
+	e.preventDefault();
+
+	// меняем путь к картинке
 	let src = $(this).attr('src');
 	$('.popup__image').attr('src', src);
 
+	$('#popup').show();
 });
 
+$('.popup__close').click(function (e) {
+	e.preventDefault();
 
+	$('#popup').hide();
+});
+
+$("#popup").click(function (e){ // событие клика по #popup
+	var div = $(".popup__content"); // тут указываем ID элемента
+	if (!div.is(e.target) // если клик был не по нашему блоку
+		&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+		$('#popup').hide();
+	}
+});

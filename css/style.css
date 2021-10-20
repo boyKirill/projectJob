@@ -7,6 +7,7 @@
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -81,13 +82,11 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding: 0px 0 0px 0;
 }
-
 .image-slider__image {
   margin: 0 auto;
   text-align: center;
   max-width: 1000px;
 }
-
 .image-slider__image img {
   max-width: 100%;
 }
@@ -153,13 +152,8 @@ body._lock {
 }
 
 .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
 }
@@ -167,53 +161,46 @@ body._lock {
 .fullscreen {
   font-family: "Open Sans", sans-serif;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7))), url("../img/bg/bgForFullscreen.webp");
-  background: linear-gradient(rgba(0, 0, 0, 0.7)), url("../img/bg/bgForFullscreen.webp");
+  background: url("../img/bg/bgForFullscreen.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
+.fullscreen::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  transition: opacity 0.6s;
+}
 .fullscreen__body {
   padding: 0 0 150px 0;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1 1 auto;
+  align-items: center;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+  z-index: 1000;
 }
-
 .fullscreen__title {
   font-size: 50px;
   color: #fff;
   margin: 0 0 20px 0;
 }
-
 .fullscreen__text {
   font-size: 30px;
   color: #fff;
   margin: 0 0 20px 0;
   padding: 0 10px;
 }
-
 .fullscreen__link {
   display: inline-block;
   line-height: 50px;
@@ -221,13 +208,10 @@ body._lock {
   color: #fff;
   letter-spacing: 2px;
   background-color: #77608d;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   padding: 0 20px;
   border-radius: 5px;
 }
-
 .fullscreen__link:hover {
   background-color: #f3da0b;
   color: black;
@@ -331,7 +315,7 @@ body._lock {
 
 min-height: 100vh;
 	&__video {
-		
+
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
@@ -342,12 +326,10 @@ min-height: 100vh;
 .team {
   background-color: #fff;
 }
-
 .team__container {
   max-width: 1280px;
   margin: 0 auto;
 }
-
 .team__title {
   color: #212121;
   font-family: "Open Sans", sans-serif;
@@ -358,7 +340,6 @@ min-height: 100vh;
   letter-spacing: 1.5px;
   padding: 80px 0 15px 0;
 }
-
 .team__text {
   font-family: "Open Sans", sans-serif;
   font-size: 25px;
@@ -367,7 +348,6 @@ min-height: 100vh;
   line-height: 28px;
   padding: 15px 15px 50px 15px;
 }
-
 .team__teacher {
   color: #212121;
   font-family: "Open Sans", sans-serif;
@@ -378,24 +358,13 @@ min-height: 100vh;
   letter-spacing: 1.5px;
   padding: 10px 10px 15px 10px;
 }
-
 .team__boss {
   margin: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 .team__classmates {
   color: #212121;
   font-family: "Open Sans", sans-serif;
@@ -406,53 +375,30 @@ min-height: 100vh;
   letter-spacing: 1.5px;
   padding: 60px 0 15px 0;
 }
-
 .team__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
   padding: 0 0 70px 0;
 }
-
 .team__member {
   margin: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 300px;
 }
 
 .boss__img {
   max-width: 300px;
 }
-
 .boss__img img {
   width: 100%;
   border-radius: 10px;
 }
-
 .boss__name {
   text-align: center;
   color: #212121;
@@ -461,7 +407,6 @@ min-height: 100vh;
   line-height: 22px;
   padding: 28px 0 7px 0;
 }
-
 .boss__description {
   color: #212121;
   font-size: 19px;
@@ -474,12 +419,10 @@ min-height: 100vh;
 .member {
   width: 33.333%;
 }
-
 .member__img img {
   width: 100%;
   border-radius: 10px;
 }
-
 .member__name {
   text-align: center;
   color: #212121;
@@ -488,7 +431,6 @@ min-height: 100vh;
   line-height: 22px;
   padding: 28px 0 7px 0;
 }
-
 .member__description {
   color: #212121;
   font-size: 19px;
@@ -497,17 +439,11 @@ min-height: 100vh;
   text-align: center;
   max-width: 300px;
 }
-
 .member__links {
   margin: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .member__links a {
   margin: 0 5px;
   color: #00897b;
@@ -518,7 +454,6 @@ min-height: 100vh;
   padding: 13px 12px;
   border-radius: 10px;
 }
-
 .member__links a:hover {
   background-color: #3949ab;
   color: #fff;
@@ -527,7 +462,6 @@ min-height: 100vh;
 .school {
   background: #f7f7f7;
 }
-
 .school__title {
   color: #212121;
   font-family: "Open Sans", sans-serif;
@@ -538,7 +472,6 @@ min-height: 100vh;
   letter-spacing: 1.5px;
   padding: 80px 0 15px 0;
 }
-
 .school__subtitle {
   font-family: "Open Sans", sans-serif;
   font-size: 25px;
@@ -546,51 +479,33 @@ min-height: 100vh;
   text-align: center;
   padding: 20px 0 50px 0;
 }
-
 .school__container {
   margin: 0 auto;
   max-width: 1280px;
   padding: 15px;
 }
-
 .school__body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 50px 0 70px 0;
 }
-
 .school__body-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 .school__image {
   width: 49%;
 }
-
 .school__image img {
   border-radius: 10px;
   width: 100%;
 }
-
 .school__text-box {
   width: 51%;
 }
-
 .school__text-box:last-child {
   padding-left: 2%;
 }
-
 .school__text {
   padding: 30px 0 0 0px;
   max-width: 90%;
@@ -605,7 +520,6 @@ min-height: 100vh;
   padding-bottom: 100px;
   background-color: #212121;
 }
-
 .slider__title {
   color: #fff;
   font-family: "Open Sans", sans-serif;
@@ -624,7 +538,6 @@ min-height: 100vh;
 .photo-grid {
   padding: 0 0 30px 0;
 }
-
 .photo-grid__title {
   color: #212121;
   font-family: "Open Sans", sans-serif;
@@ -635,50 +548,33 @@ min-height: 100vh;
   letter-spacing: 1.5px;
   padding: 80px 0 30px 0;
 }
-
 .photo-grid__media {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 .photo-grid__view {
   width: 20%;
   margin: 0.5%;
 }
-
 .photo-grid__image {
   width: 100%;
   height: 100%;
   cursor: pointer;
+  object-fit: cover;
 }
-
 .photo-grid__image:hover {
-  -webkit-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: #000;
   height: 70px;
 }
-
 .footer__copyrights {
   color: #fff;
   font-family: "Open Sans", sans-serif;
@@ -697,16 +593,9 @@ min-height: 100vh;
   padding: 0 30px;
   top: 0;
   left: 0;
-  z-index: 100;
-  opacity: 0;
-  visibility: hidden;
+  z-index: 1100;
+  display: none;
 }
-
-.popup:target {
-  opacity: 1;
-  visibility: visible;
-}
-
 .popup__area {
   position: absolute;
   width: 100%;
@@ -715,21 +604,13 @@ min-height: 100vh;
   left: 0;
   cursor: auto;
 }
-
 .popup__body {
   min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 30px 10px;
 }
-
 .popup__content {
   background-color: #fff;
   color: #000;
@@ -737,17 +618,14 @@ min-height: 100vh;
   padding: 30px;
   position: relative;
 }
-
 .popup__title {
   font-size: 30px;
   padding: 0 0 30px 0;
   text-align: center;
 }
-
 .popup__text {
   font-size: 24px;
 }
-
 .popup__close {
   position: absolute;
   top: 10px;
@@ -755,12 +633,12 @@ min-height: 100vh;
   font-size: 50px;
   color: #000;
 }
-
 .popup__image-box {
   width: 90%;
   padding-left: 10%;
 }
-
 .popup__image {
   width: 100%;
 }
+
+/*# sourceMappingURL=style.css.map */
