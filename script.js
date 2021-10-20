@@ -264,11 +264,3 @@ const swiper = new Swiper('.image-slider', {
 });
 
 
-// вставляем картинку в popup
-$('.photo-grid__image').click(function () {
-	let src = $(this).attr('src');
-	$('.popup__image').attr('src', src);
-
-});
-
-

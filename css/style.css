@@ -656,6 +656,8 @@ min-height: 100vh;
   width: 100%;
   height: 100%;
   cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .photo-grid__image:hover {
@@ -702,7 +704,7 @@ min-height: 100vh;
   visibility: hidden;
 }
 
-.popup:target {
+.popup.open {
   opacity: 1;
   visibility: visible;
 }
